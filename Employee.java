@@ -1,5 +1,11 @@
 package day2;
 public class Employee {
+	
+	static int counter=1;
+	static {
+		counter=1;
+	}
+	
 	public int empid;
 	public String ename;
 	public double BASIC_SALARY;
@@ -10,21 +16,15 @@ public class Employee {
 	public double NET_SALARY;
 	public double GROSS_SALARY;
 	
-	//public static String company="HSBC";
-
-	/*
-	 * public Employee(int empid, String ename, int salary) { this();
-	 * System.out.println("PARAMETERIZED CONSTR"); this.empid = empid; this.ename =
-	 * ename; this.salary = salary; }
-	 */
 	public Employee()
 	{
 		System.out.println("Default Constr");
 	}
 
-	public Employee(int empid, String ename, double bASIC_SALARY, double medical) {
+	
+	public Employee( String ename, double bASIC_SALARY, double medical) {
 		super();
-		this.empid = empid;
+		this.empid = counter++;
 		this.ename = ename;
 		BASIC_SALARY = bASIC_SALARY;
 		this.medical = medical;
@@ -42,13 +42,8 @@ public class Employee {
 				+ ", GROSS_SALARY=" + GROSS_SALARY + "]";
 	}
 	
-	public void displayEmpDetails()
+	public void printEmpDetails()
 	{
 		System.out.println(this.toString());
 	}
-
-	/*
-	 * public void printEmp() { System.out.println("ID "+ empid);
-	 * System.out.println("name "+ ename); System.out.println("salary "+ salary); }
-	 */	
 }
