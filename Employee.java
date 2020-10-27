@@ -16,12 +16,42 @@ public class Employee {
 	public double NET_SALARY;
 	public double GROSS_SALARY;
 	
-	public Employee()
+	private Employee()
 	{
 		System.out.println("Default Constr");
 	}
 
 	
+	public int getEmpid() {
+		return empid;
+	}
+
+
+	public void setEmpid(int empid) {
+		this.empid = empid;
+	}
+
+
+	public String getEname() {
+		return ename;
+	}
+
+
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+
+
+	public double getBASIC_SALARY() {
+		return BASIC_SALARY;
+	}
+
+
+	public void setBASIC_SALARY(double bASIC_SALARY) {
+		BASIC_SALARY = bASIC_SALARY;
+	}
+
+
 	public Employee( String ename, double bASIC_SALARY, double medical) {
 		super();
 		this.empid = counter++;
@@ -35,15 +65,11 @@ public class Employee {
 		NET_SALARY=GROSS_SALARY-(pt+pf);
 	}
 
-	@Override
-	public String toString() {
-		return "Employee [empid=" + empid + ", ename=" + ename + ", BASIC_SALARY=" + BASIC_SALARY + ", HRA=" + HRA
-				+ ", medical=" + medical + ", pf=" + pf + ", pt=" + pt + ", NET_SALARY=" + NET_SALARY
-				+ ", GROSS_SALARY=" + GROSS_SALARY + "]";
-	}
 	
 	public void printEmpDetails()
 	{
-		System.out.println(this.toString());
+		System.out.println("EMP ID "+ getEmpid());
+		System.out.println("EMP NAME "+ getEname());
+		System.out.println("EMP NET_SALARY"+ NET_SALARY);
 	}
 }
