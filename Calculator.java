@@ -1,4 +1,4 @@
-package day2;
+package day2.FLIND2;
 
 public class Calculator {
 	int add(int...ar)

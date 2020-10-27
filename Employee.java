@@ -1,4 +1,4 @@
-package day2;
+package day2.FLIND2;
 public class Employee {
 	
 	static int counter=1;
@@ -16,7 +16,7 @@ public class Employee {
 	public double NET_SALARY;
 	public double GROSS_SALARY;
 	
-	private Employee()
+	public Employee()
 	{
 		System.out.println("Default Constr");
 	}
@@ -51,6 +51,15 @@ public class Employee {
 		BASIC_SALARY = bASIC_SALARY;
 	}
 
+	public double getNetSalary()
+	{
+		return BASIC_SALARY+HRA+medical;
+	}
+
+	public double getGrossSalary()
+	{
+		return BASIC_SALARY-pt -pf;
+	}
 
 	public Employee( String ename, double bASIC_SALARY, double medical) {
 		super();
