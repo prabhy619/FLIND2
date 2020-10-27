@@ -80,5 +80,6 @@ public class Employee {
 		System.out.println("EMP ID "+ getEmpid());
 		System.out.println("EMP NAME "+ getEname());
 		System.out.println("EMP NET_SALARY"+ NET_SALARY);
-	}
+	}	
+	
 }
